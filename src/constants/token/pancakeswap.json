@@ -1,0 +1,56 @@
+{
+  "name": "PancakeSwap Default List",
+  "timestamp": "2021-03-17T09:56:23Z",
+  "version": {
+    "major": 2,
+    "minor": 10,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "https://exchange.pancakeswap.finance/images/pancakeswap.png",
+  "keywords": [
+    "pancake",
+    "default"
+  ],
+  "tokens": [
+    {
+      "name": "Matic",
+      "abbr": "MTC",
+      "symbol": "MTC",
+      "icon": "https://wallet-asset.matic.network/img/tokens/dai.svg",
+      "address": "0xF91585bA6ea945C2B2fa758d7520c780166A0d55",
+      "chainId": 80001,
+      "decimals": 18,
+      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
+    },
+    {
+      "name": "MTC_coin",
+      "abbr": "MTC",
+      "symbol": "MTC",
+      "address": "0x80CEF3f6450DE45c7D0f6d5Fda36e0D3cbC8fb73",
+      "chainId": 80001,
+      "decimals": 18,
+      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
+    },
+    {
+      "name": "WWI",
+      "abbr": "WWI",
+      "symbol": "WWI",
+      "address": "0x166264F6D700F2b44E53bE5b5d3Bc14Fb9319EFB",
+      "chainId": 80001,
+      "decimals": 18,
+      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
+    
+    },
+    {
+      "name": "ZDK",
+      "abbr": "ZDK",
+      "symbol": "ZDK",
+      "address": "0x1c6Df9Fb01935277bA4464b0ddD404099c007eb3",
+      "chainId": 80001,
+      "decimals": 18,
+      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
+   
+    }
+  ]
+}
