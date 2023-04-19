@@ -2,6 +2,8 @@ import { ChainId } from '@im33357/uniswap-v2-sdk'
 import React from 'react'
 import { isMobile } from 'react-device-detect'
 import { Text } from 'rebass'
+import { Moon, Sun } from 'react-feather'
+
 
 import styled from 'styled-components'
 
@@ -126,6 +128,27 @@ const BalanceText = styled(Text)`
   `};
 `
 
+const ToggleMenuItem = styled.button`
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text2};
+  :hover {
+    color: ${({ theme }) => theme.text1};
+    cursor: pointer;
+    text-decoration: none;
+  }
+`
+
 const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   [ChainId.MAINNET]: null,
   [ChainId.RINKEBY]: 'Rinkeby',
@@ -140,16 +163,19 @@ export default function Header() {
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
   const [isDark] = useDarkModeManager()
 
+  const [darkMode, toggleDarkMode] = useDarkModeManager()
+
+
   return (
     <HeaderFrame>
       <RowBetween style={{ alignItems: 'flex-start' }} padding="1rem 1rem 0 1rem">
         <HeaderElement>
           <Title href=".">
             <UniIcon>
-              <img style={{width:'2rem'}} src={isDark ? LogoDark : Logo} alt="logo" />
+              <img style={{ width: '2rem' }} src={isDark ? LogoDark : Logo} alt="logo" />
             </UniIcon>
             <TitleText >
-              <img style={{ marginLeft: '4px', marginTop: '-4px', width:'6.5rem' }} src={isDark ? WordmarkDark : Wordmark} alt="logo" />
+              <img style={{ marginLeft: '4px', marginTop: '-4px', width: '6.5rem' }} src={isDark ? WordmarkDark : Wordmark} alt="logo" />
             </TitleText>
           </Title>
         </HeaderElement>
@@ -168,8 +194,11 @@ export default function Header() {
             </AccountElement>
           </HeaderElement>
           <HeaderElementWrap>
-           
+
             <Settings />
+            <ToggleMenuItem onClick={() => toggleDarkMode()}>
+              {darkMode ? <Moon opacity={0.8} size={16} /> : <Sun opacity={0.8} size={16} />}
+            </ToggleMenuItem>
             <Menu />
           </HeaderElementWrap>
         </HeaderControls>

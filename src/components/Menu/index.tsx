@@ -1,14 +1,9 @@
 import React, { useRef } from 'react'
-import {
-  Info, BookOpen, Code, 
-  Moon,
-  Sun,
-} from 'react-feather'
+import { Info, BookOpen, Code} from 'react-feather'
 import styled from 'styled-components'
 import { ReactComponent as MenuIcon } from '../../assets/images/menu.svg'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
 import useToggle from '../../hooks/useToggle'
-import { useDarkModeManager } from '../../state/user/hooks'
 
 
 import { ExternalLink } from '../../theme'
@@ -84,28 +79,6 @@ const MenuItem = styled(ExternalLink)`
   }
 `
 
-
-const ToggleMenuItem = styled.button`
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-  border: none;
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-  align-items: center;
-  padding: 0.5rem 0.5rem;
-  justify-content: space-between;
-  font-size: 1rem;
-  font-weight: 500;
-  color: ${({ theme }) => theme.text2};
-  :hover {
-    color: ${({ theme }) => theme.text1};
-    cursor: pointer;
-    text-decoration: none;
-  }
-`
-
 // const CODE_LINK = 'https://github.com/Uniswap/uniswap-interface'
 
 export default function Menu() {
@@ -113,8 +86,6 @@ export default function Menu() {
   const [open, toggle] = useToggle(false)
 
   useOnClickOutside(node, open ? toggle : undefined)
-
-  const [darkMode, toggleDarkMode] = useDarkModeManager()
 
 
   return (
@@ -125,12 +96,6 @@ export default function Menu() {
       </StyledMenuButton>
       {open && (
         <MenuFlyout>
-        
-          <ToggleMenuItem onClick={() => toggleDarkMode()}>
-            <div>{darkMode ? <h6>Light Theme</h6> : <h6>Dark Theme</h6>}</div>
-            {darkMode ? <Moon opacity={0.6} size={16} /> : <Sun opacity={0.6} size={16} />}
-          </ToggleMenuItem>
-
           <MenuItem id="link" href="#">
             <Info size={14} />
             Swap
