@@ -3,10 +3,12 @@
   "description": "Uniswap Interface",
   "repository": "https://github.com/33357/uniswap-v2-interface.git",
   "homepage": "https://33357.github.io/uniswap-v2-interface",
+  "workspaces": [
+    "packages/*"
+  ],
   "private": true,
   "devDependencies": {
     "@ethersproject/experimental": "^5.0.1",
-    "@im33357/uniswap-v2-sdk": "3.0.7",
     "@popperjs/core": "^2.4.4",
     "@reach/dialog": "^0.10.3",
     "@reach/portal": "^0.10.3",
