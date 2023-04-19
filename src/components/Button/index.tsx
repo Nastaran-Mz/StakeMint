@@ -118,7 +118,7 @@ export const ButtonSecondary = styled(Base)`
   padding: ${({ padding }) => (padding ? padding : '10px')};
 
   &:focus {
-    box-shadow: 0 0 0 1pt #0FD17A;
+    box-shadow: 0 0 0 1pt transparent;
     background-color:#0FD17A ;
   }
   &:hover {
@@ -126,7 +126,7 @@ export const ButtonSecondary = styled(Base)`
     
   }
   &:active {
-    box-shadow: 0 0 0 1pt #0FD17A;
+    box-shadow: 0 0 0 1pt transparent;
     background-color: #0FD17A;
   }
   &:disabled {
