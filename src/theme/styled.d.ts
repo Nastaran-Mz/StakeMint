@@ -44,7 +44,8 @@ export interface Colors {
   yellow1: Color
   yellow2: Color,
 
-  backimage : string
+  backimage : string,
+  mobileapp : string
 }
 
 export interface Grids {

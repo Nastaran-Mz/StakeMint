@@ -21,7 +21,7 @@ import RemoveLiquidity from './RemoveLiquidity'
 import { RedirectOldRemoveLiquidityPathStructure } from './RemoveLiquidity/redirects'
 import Swap from './Swap'
 import { RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
-import Footer from '../components/Footer'
+import Footer from './Swap/Footer'
 
 
 const AppWrapper = styled.div`
@@ -29,6 +29,11 @@ const AppWrapper = styled.div`
   flex-flow: column;
   align-items: flex-start;
   overflow-x: hidden;
+  background-image:  ${({theme}) => theme.mobileapp};
+  background-repeat: no-repeat;
+  background-position: 15% 45%;
+  background-size: 500px 550px;
+  position: relative;
 `
 
 const HeaderWrapper = styled.div`
@@ -41,7 +46,8 @@ const BodyWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 160px;
+  margin-left: 250px;
+  padding-top: 140px;
   align-items: center;
   flex: 1;
   overflow-y: auto;
@@ -59,10 +65,6 @@ const Marginer = styled.div`
   margin-top: 5rem;
 `
 
-
-
-            
-
 export default function App() {
   return (
     <Suspense fallback={null}>
@@ -73,11 +75,11 @@ export default function App() {
           <HeaderWrapper>
             <Header />
           </HeaderWrapper>
+
           <BodyWrapper>
             <Popups />
             <Web3ReactManager>
               <Switch>
-                
                 <Route exact strict path="/swap" component={Swap} />
                 <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
                 <Route exact strict path="/send" component={RedirectPathToSwapOnly} />
@@ -95,8 +97,10 @@ export default function App() {
                 <Route component={RedirectPathToSwapOnly} />
               </Switch>
             </Web3ReactManager>
+
             <Marginer />
-            <Footer/>
+
+            <Footer />
           </BodyWrapper>
         </AppWrapper>
       </HashRouter>

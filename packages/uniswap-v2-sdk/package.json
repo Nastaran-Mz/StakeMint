@@ -31,6 +31,7 @@
     "tiny-warning": "^1.0.3",
     "toformat": "^2.0.0"
   },
+  
   "peerDependencies": {
     "@ethersproject/address": "^5.0.0-beta",
     "@ethersproject/contracts": "^5.0.0-beta",

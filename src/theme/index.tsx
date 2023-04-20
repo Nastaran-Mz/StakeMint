@@ -84,6 +84,7 @@ export function colors(darkMode: boolean): Colors {
 
     // background Image
     backimage: darkMode ? "url('/images/bgdark.jpeg');" : "url('/images/bglight.jpeg');",
+    mobileapp : darkMode ? "url('/images/bg-2-dark.png');" : "url('/images/bg-2.png');"
 
     // dont wanna forget these blue yet
     // blue4: darkMode ? '#153d6f70' : '#C4D9F8',
@@ -219,8 +220,6 @@ body {
   min-height: 100vh;
   background-position: 0 -30vh;
   background-repeat: no-repeat;
-  
-   
     background-image: ${({theme}) => theme.backimage}
       // url('/images/bglight.jpeg');
     background-repeat: no-repeat;

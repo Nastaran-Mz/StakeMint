@@ -38,5 +38,5 @@
   "include": [
     "./src/**/*.ts",
     "./src/**/*.tsx"
-  ]
+, "src/pages/Swap/Footer.js"  ]
 }
