@@ -49,6 +49,7 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^4.0.0",
     "ethers": "^5.0.7",
+    "gh-pages": "^3.2.3",
     "i18next": "^15.0.9",
     "i18next-browser-languagedetector": "^3.0.1",
     "i18next-xhr-backend": "^2.0.1",
@@ -79,8 +80,7 @@
     "serve": "^11.3.0",
     "start-server-and-test": "^1.11.0",
     "styled-components": "^4.2.0",
-    "typescript": "^3.8.3",
-    "gh-pages": "^3.2.3"
+    "typescript": "^3.8.3"
   },
   "resolutions": {
     "@walletconnect/web3-provider": "1.1.1-alpha.0"
@@ -109,5 +109,9 @@
       "last 1 safari version"
     ]
   },
-  "license": "GPL-3.0-or-later"
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "cdbreact": "^1.5.13",
+    "mdb-react-ui-kit": "^6.0.0"
+  }
 }

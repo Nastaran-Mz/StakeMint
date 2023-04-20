@@ -21,6 +21,8 @@ import RemoveLiquidity from './RemoveLiquidity'
 import { RedirectOldRemoveLiquidityPathStructure } from './RemoveLiquidity/redirects'
 import Swap from './Swap'
 import { RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
+import Footer from '../components/Footer'
+
 
 const AppWrapper = styled.div`
   display: flex;
@@ -94,6 +96,7 @@ export default function App() {
               </Switch>
             </Web3ReactManager>
             <Marginer />
+            <Footer/>
           </BodyWrapper>
         </AppWrapper>
       </HashRouter>
