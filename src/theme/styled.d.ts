@@ -42,7 +42,9 @@ export interface Colors {
   red2: Color
   green1: Color
   yellow1: Color
-  yellow2: Color
+  yellow2: Color,
+
+  backimage : string
 }
 
 export interface Grids {
