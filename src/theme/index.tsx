@@ -215,7 +215,15 @@ body {
   min-height: 100vh;
   background-position: 0 -30vh;
   background-repeat: no-repeat;
-  // background: url("../../public/images/bgdark.jpeg");
-
-}
+  
+   
+    background-image: 
+      url('/images/bglight.jpeg');
+    background-repeat: no-repeat;
+    background-position: top center, left center;
+    background-size: cover;
+    
+  }
 `
+
+
