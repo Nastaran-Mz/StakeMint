@@ -11,7 +11,7 @@ const Footer = () => {
         <footer className="bg-neutral-200 text-center text-white dark:bg-neutral-600">
             <div className="container pt-9">
                 <div className="mb-9 flex justify-center">
-                    <a href="#" style={{marginRight:'10px'}} className="mr-9 text-neutral-800 dark:text-neutral-200">
+                    <a href="http://instagram.com" style={{marginRight:'10px'}} className="mr-9 text-neutral-800 dark:text-neutral-200">
                         {darkMode ?
                             <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M29.4499 18.07C29.7613 18.072 30.0662 17.9813 30.3259 17.8096C30.5856 17.6378 30.7884 17.3928 30.9085 17.1055C31.0285 16.8182 31.0605 16.5017 31.0002 16.1962C30.9399 15.8907 30.7902 15.6101 30.5701 15.3899C30.3499 15.1697 30.0692 15.02 29.7637 14.9597C29.4583 14.8995 29.1418 14.9314 28.8545 15.0515C28.5672 15.1715 28.3221 15.3743 28.1503 15.6341C27.9786 15.8938 27.8879 16.1987 27.8899 16.51C27.8899 16.9238 28.0543 17.3206 28.3468 17.6131C28.6394 17.9057 29.0362 18.07 29.4499 18.07Z" fill="white" />
