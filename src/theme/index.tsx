@@ -91,9 +91,6 @@ export function colors(darkMode: boolean): Colors {
   }
 }
 
-// background Image
-// backimage: darkMode ? "/images/bglight.jpeg" : "/images/bglight.jpeg"
-
 
 export function theme(darkMode: boolean): DefaultTheme {
   return {
