@@ -29,11 +29,11 @@ const AppWrapper = styled.div`
   flex-flow: column;
   align-items: flex-start;
   overflow-x: hidden;
-  background-image:  ${({theme}) => theme.mobileapp};
-  background-repeat: no-repeat;
-  background-position: 15% 45%;
-  background-size: 500px 550px;
-  position: relative;
+  // background-image:  ${({theme}) => theme.mobileapp};
+  // background-repeat: no-repeat;
+  // background-position: 15% 45%;
+  // background-size: 500px 550px;
+  // position: relative;
 `
 
 const HeaderWrapper = styled.div`
@@ -46,7 +46,7 @@ const BodyWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-left: 250px;
+  // margin-left: 250px;
   padding-top: 140px;
   align-items: center;
   flex: 1;
