@@ -180,6 +180,14 @@ export default function Header() {
           </Title>
         </HeaderElement>
         <HeaderControls>
+          <HeaderElementWrap>
+
+            <Settings />
+            <ToggleMenuItem onClick={() => toggleDarkMode()}>
+              {darkMode ? <Moon opacity={0.8} size={16} /> : <Sun opacity={0.8} size={16} />}
+            </ToggleMenuItem>
+            <Menu />
+          </HeaderElementWrap>
           <HeaderElement>
             <TestnetWrapper>
               {!isMobile && chainId && NETWORK_LABELS[chainId] && <NetworkCard>{NETWORK_LABELS[chainId]}</NetworkCard>}
@@ -193,14 +201,6 @@ export default function Header() {
               <Web3Status />
             </AccountElement>
           </HeaderElement>
-          <HeaderElementWrap>
-
-            <Settings />
-            <ToggleMenuItem onClick={() => toggleDarkMode()}>
-              {darkMode ? <Moon opacity={0.8} size={16} /> : <Sun opacity={0.8} size={16} />}
-            </ToggleMenuItem>
-            <Menu />
-          </HeaderElementWrap>
         </HeaderControls>
       </RowBetween>
     </HeaderFrame>
