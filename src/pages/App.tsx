@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import { HashRouter, Route, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import GoogleAnalyticsReporter from '../components/analytics/GoogleAnalyticsReporter'
-import Header from '../components/Header'
+// import Header from '../components/Header'
 import Popups from '../components/Popups'
 import Web3ReactManager from '../components/Web3ReactManager'
 import DarkModeQueryParamReader from '../theme/DarkModeQueryParamReader'
@@ -21,7 +21,7 @@ import RemoveLiquidity from './RemoveLiquidity'
 import { RedirectOldRemoveLiquidityPathStructure } from './RemoveLiquidity/redirects'
 import Swap from './Swap'
 import { RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
-import Footer from './Swap/Footer'
+// import Footer from './Swap/Footer'
 
 
 const AppWrapper = styled.div`
@@ -36,11 +36,11 @@ const AppWrapper = styled.div`
   // position: relative;
 `
 
-const HeaderWrapper = styled.div`
-  ${({ theme }) => theme.flexRowNoWrap}
-  width: 100%;
-  justify-content: space-between;
-`
+// const HeaderWrapper = styled.div`
+//   ${({ theme }) => theme.flexRowNoWrap}
+//   width: 100%;
+//   justify-content: space-between;
+// `
 
 const BodyWrapper = styled.div`
   display: flex;
@@ -72,9 +72,9 @@ export default function App() {
         <Route component={GoogleAnalyticsReporter} />
         <Route component={DarkModeQueryParamReader} />
         <AppWrapper>
-          <HeaderWrapper>
+          {/* <HeaderWrapper>
             <Header />
-          </HeaderWrapper>
+          </HeaderWrapper> */}
 
           <BodyWrapper>
             <Popups />
@@ -100,7 +100,7 @@ export default function App() {
 
             <Marginer />
 
-            <Footer />
+            {/* <Footer /> */}
           </BodyWrapper>
         </AppWrapper>
       </HashRouter>
