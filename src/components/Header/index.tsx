@@ -2,24 +2,24 @@ import { ChainId } from '@im33357/uniswap-v2-sdk'
 import React from 'react'
 import { isMobile } from 'react-device-detect'
 import { Text } from 'rebass'
-import { Moon, Sun } from 'react-feather'
+// import { Moon, Sun } from 'react-feather'
 
 
 import styled from 'styled-components'
 
-import Logo from '../../assets/svg/logo.png'
-import LogoDark from '../../assets/svg/logo.png'
-import Wordmark from '../../assets/svg/wordmark.svg'
-import WordmarkDark from '../../assets/svg/wordmark_white.svg'
+// import Logo from '../../assets/svg/logo.png'
+// import LogoDark from '../../assets/svg/logo.png'
+// import Wordmark from '../../assets/svg/wordmark.svg'
+// import WordmarkDark from '../../assets/svg/wordmark_white.svg'
 import { useActiveWeb3React } from '../../hooks'
-import { useDarkModeManager } from '../../state/user/hooks'
+// import { useDarkModeManager } from '../../state/user/hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
 
 import { YellowCard } from '../Card'
-import Settings from '../Settings'
-import Menu from '../Menu'
+// import Settings from '../Settings'
+// import Menu from '../Menu'
 
-import Row, { RowBetween } from '../Row'
+// import Row, { RowBetween } from '../Row'
 import Web3Status from '../Web3Status'
 
 
@@ -53,23 +53,23 @@ const HeaderElementWrap = styled.div`
 `};
 `
 
-const Title = styled.a`
-  display: flex;
-  align-items: center;
-  pointer-events: auto;
+// const Title = styled.a`
+//   display: flex;
+//   align-items: center;
+//   pointer-events: auto;
 
-  :hover {
-    cursor: pointer;
-  }
-`
+//   :hover {
+//     cursor: pointer;
+//   }
+// `
 
-const TitleText = styled(Row)`
-  width: fit-content;
-  white-space: nowrap;
-  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-    display: none;
-  `};
-`
+// const TitleText = styled(Row)`
+//   width: fit-content;
+//   white-space: nowrap;
+//   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+//     display: none;
+//   `};
+// `
 
 const AccountElement = styled.div<{ active: boolean }>`
   display: flex;
@@ -99,17 +99,17 @@ const NetworkCard = styled(YellowCard)`
   padding: 8px 12px;
 `
 
-const UniIcon = styled.div`
-  transition: transform 0.3s ease;
-  :hover {
-    transform: rotate(-5deg);
-  }
-  ${({ theme }) => theme.mediaWidth.upToSmall`
-    img { 
-      width: 4.5rem;
-    }
-  `};
-`
+// const UniIcon = styled.div`
+//   transition: transform 0.3s ease;
+//   :hover {
+//     transform: rotate(-5deg);
+//   }
+//   ${({ theme }) => theme.mediaWidth.upToSmall`
+//     img { 
+//       width: 4.5rem;
+//     }
+//   `};
+// `
 
 const HeaderControls = styled.div`
   display: flex;
@@ -128,26 +128,26 @@ const BalanceText = styled(Text)`
   `};
 `
 
-const ToggleMenuItem = styled.button`
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-  border: none;
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-  align-items: center;
-  padding: 0.5rem 0.5rem;
-  justify-content: space-between;
-  font-size: 1rem;
-  font-weight: 500;
-  color: ${({ theme }) => theme.text2};
-  :hover {
-    color: ${({ theme }) => theme.text1};
-    cursor: pointer;
-    text-decoration: none;
-  }
-`
+// const ToggleMenuItem = styled.button`
+//   background-color: transparent;
+//   margin: 0;
+//   padding: 0;
+//   border: none;
+//   display: flex;
+//   flex: 1;
+//   flex-direction: row;
+//   align-items: center;
+//   padding: 0.5rem 0.5rem;
+//   justify-content: space-between;
+//   font-size: 1rem;
+//   font-weight: 500;
+//   color: ${({ theme }) => theme.text2};
+//   :hover {
+//     color: ${({ theme }) => theme.text1};
+//     cursor: pointer;
+//     text-decoration: none;
+//   }
+// `
 
 const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   [ChainId.MAINNET]: null,
@@ -161,32 +161,32 @@ export default function Header() {
   const { account, chainId } = useActiveWeb3React()
 
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
-  const [isDark] = useDarkModeManager()
+  // const [isDark] = useDarkModeManager()
 
-  const [darkMode, toggleDarkMode] = useDarkModeManager()
+  // const [darkMode, toggleDarkMode] = useDarkModeManager()
 
 
   return (
     <HeaderFrame>
-      <RowBetween style={{ alignItems: 'flex-start' }} padding="1rem 1rem 0 1rem">
-        <HeaderElement>
-          <Title href=".">
+      {/* <RowBetween style={{ alignItems: 'flex-start' }} padding="1rem 1rem 0 1rem">
+        <HeaderElement> */}
+          {/* <Title href=".">
             <UniIcon>
               <img style={{ width: '2rem' }} src={isDark ? LogoDark : Logo} alt="logo" />
             </UniIcon>
             <TitleText >
               <img style={{ marginLeft: '4px', marginTop: '-4px', width: '6.5rem' }} src={isDark ? WordmarkDark : Wordmark} alt="logo" />
             </TitleText>
-          </Title>
-        </HeaderElement>
+          </Title> */}
+        {/* </HeaderElement> */}
         <HeaderControls>
           <HeaderElementWrap>
 
-            <Settings />
+            {/* <Settings />
             <ToggleMenuItem onClick={() => toggleDarkMode()}>
               {darkMode ? <Moon opacity={0.8} size={16} /> : <Sun opacity={0.8} size={16} />}
             </ToggleMenuItem>
-            <Menu />
+            <Menu /> */}
           </HeaderElementWrap>
           <HeaderElement>
             <TestnetWrapper>
@@ -202,7 +202,7 @@ export default function Header() {
             </AccountElement>
           </HeaderElement>
         </HeaderControls>
-      </RowBetween>
+      {/* </RowBetween> */}
     </HeaderFrame>
   )
 }
