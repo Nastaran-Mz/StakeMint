@@ -220,7 +220,7 @@ body {
   min-height: 100vh;
   background-position: 0 -30vh;
   background-repeat: no-repeat;
-    background-image: ${({theme}) => theme.backimage}
+    // background-image: ${({theme}) => theme.backimage}
       // url('/images/bglight.jpeg');
     background-repeat: no-repeat;
     background-position: top center, left center;

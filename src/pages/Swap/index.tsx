@@ -19,7 +19,8 @@ import { ArrowWrapper, BottomGrouping, SwapCallbackError, Wrapper } from '../../
 import TradePrice from '../../components/swap/TradePrice'
 import TokenWarningModal from '../../components/TokenWarningModal'
 import ProgressSteps from '../../components/ProgressSteps'
-
+import { Moon, Sun } from 'react-feather'
+import { useDarkModeManager } from '../../state/user/hooks'
 import { BETTER_TRADE_LINK_THRESHOLD, INITIAL_ALLOWED_SLIPPAGE } from '../../constants'
 import { getTradeVersion, isTradeBetter } from '../../data/V1'
 import { useActiveWeb3React } from '../../hooks'
@@ -44,9 +45,32 @@ import { computeTradePriceBreakdown, warningSeverity } from '../../utils/prices'
 import AppBody from '../AppBody'
 import { ClickableText } from '../Pool/styleds'
 import Loader from '../../components/Loader'
-
+import styled from 'styled-components'
 export default function Swap() {
   const loadedUrlParams = useDefaultsFromURLSearch()
+  
+const ToggleMenuItem = styled.button`
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text2};
+  :hover {
+    color: ${({ theme }) => theme.text1};
+    cursor: pointer;
+    text-decoration: none;
+  }
+`
+
+
 
   // token warning stuff
   const [loadedInputCurrency, loadedOutputCurrency] = [
@@ -261,6 +285,7 @@ export default function Swap() {
     },
     [onCurrencySelection]
   )
+  const [darkMode, toggleDarkMode] = useDarkModeManager()
 
   const handleMaxInput = useCallback(() => {
     maxAmountInput && onUserInput(Field.INPUT, maxAmountInput.toExact())
@@ -270,6 +295,7 @@ export default function Swap() {
     onCurrencySelection
   ])
 
+  
   return (
     <>
       <TokenWarningModal
@@ -278,6 +304,9 @@ export default function Swap() {
         onConfirm={handleConfirmTokenWarning}
       />
       <AppBody>
+      <ToggleMenuItem onClick={() => toggleDarkMode()}>
+              {darkMode ? <Moon opacity={0.8} size={16} /> : <Sun opacity={0.8} size={16} />}
+            </ToggleMenuItem>
         <SwapPoolTabs active={'swap'} />
         <Wrapper id="swap-page">
           <ConfirmSwapModal

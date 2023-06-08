@@ -6,9 +6,10 @@ export const BodyWrapper = styled.div`
   max-width: 420px;
   height:462.79px;
   width: 100%;
+  border: 1px solid gray;
   background: ${({ theme }) => theme.bg1};
-  box-shadow: 0px 0px 1px rgba(12, 87, 68, 0), 0px 4px 8px rgba(6, 135, 91, 0.5), 0px 16px 24px rgba(12, 87, 68, 0),
-    0px 24px 32px rgba(6, 135, 91, 0.5);
+  // box-shadow: 0px 0px 1px rgba(12, 87, 68, 0), 0px 4px 8px rgba(6, 135, 91, 0.5), 0px 16px 24px rgba(12, 87, 68, 0),
+  //   0px 24px 32px rgba(6, 135, 91, 0.5);
   border-radius: 30px;
   padding: 1rem;
   
